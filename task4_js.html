@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time Display</title>
+</head>
+<body>
+    <div>
+        <p>Date: <span id="date"></span></p>
+        <p>Time (IST): <span id="time"></span></p>
+    </div>
+
+    <button onclick="showDate()">Show Date</button>
+    <button onclick="showTime()">Show Time</button>
+
+    <script>
+        function showDate() {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const date = new Date().toLocaleDateString('en-IN', options);
+            document.getElementById('date').innerText = date;
+        }
+
+        function showTime() {
+            const time = new Date().toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata' });
+            document.getElementById('time').innerText = time;
+        }
+    </script>
+</body>
+</html>

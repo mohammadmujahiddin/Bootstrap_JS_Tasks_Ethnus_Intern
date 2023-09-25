@@ -1,0 +1,133 @@
+.page{
+    display: inline;
+    width: auto;
+    
+}
+.home{
+    
+    background-color: yellow;
+    display: flex;
+    width: auto;
+    height: 100px;
+    margin: auto;
+}
+.title{
+    font-size: 50px;
+    margin-left: 45px;
+    font-weight: bolder;
+    padding-left: 30px;
+    
+    
+}
+.working{
+    display: flex;
+    padding: 10px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: 20px;
+}
+.timings, .callus, .emailus{
+    display: flex;
+    padding-right: 50px;
+}
+
+.navi{
+    
+    background-color: yellow;
+    margin-bottom: 0px;
+    
+}
+nav{
+    background-color: rgb(2, 4, 44);
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 60px;
+    align-items: center;
+    text-decoration-color: rgb(209, 18, 18);
+}
+.bordered-button-mini {
+    border: 2px solid #ffffff;
+    width: 100px;
+    height: 20px;
+    padding: 5px;
+    text-decoration: none; 
+    background-color: transparent; 
+    color: #ffffff; 
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 120px;
+    margin-right: 90px;
+    margin-bottom: 50px;
+}
+.navina{
+    text-transform: capitalize;
+    margin-top: 20px;
+    top: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    position: relative;
+    font-size: 20px;
+}
+.boody {
+    display: flex;
+    background-image: url('body\ img.jpeg');
+    background-size: cover;
+    background-position: 100%;
+    width: auto;
+    height: 400px;
+    margin: auto;
+    margin-top: 0px;
+    
+}
+.bordered-button {
+    border: 5px solid #000;
+    width: 100px;
+    text-decoration-color: aliceblue;
+    padding: 10px 20px; 
+    text-decoration: none; 
+    display: inline-block;
+    background-color: transparent; 
+    color: #000; 
+    
+}
+.context{
+    text-transform: capitalize;
+    color: rgb(29, 253, 81);
+    
+    margin: auto;
+    font-size: larger;
+    font-style: oblique;
+    font-weight: bolder;
+}
+.bottom{
+    display: flex;
+    padding: auto;
+}
+.expert{
+    background-color: #070556;
+    width: 33.33%;
+    height: 30vh;
+    display: flex;
+}
+.quality{
+    background-color: rgb(194, 194, 8);
+    width: 33.33%;
+    height: 30vh;
+    display: inline;
+}
+.support{
+    height: 30vh;
+    background-color: #070556;
+    width: 33.33%;
+}
+.expert1, .quality1, .support1{
+    margin: auto;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}

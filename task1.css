@@ -1,0 +1,41 @@
+.header{
+    display: inline;
+}
+.title{
+    text-align: center;
+    background-color: rgb(58, 164, 246);
+    padding: 0px;
+    height: 45px;
+}
+.navigation{
+    background-color: grey;
+    padding: 1px;
+    display: flex;
+}
+nav{
+    padding: 5px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+.sign{
+    margin-left: auto;
+    padding: auto;
+}
+
+.main{
+    display: flex;
+}
+.info{
+    margin-left: auto;
+    width: 20%;
+    height: 100vh;
+    background-color: rgb(108, 108, 108);
+    text-align: center;
+}
+.content{
+    text-align: center;
+    width: 80%;
+}
