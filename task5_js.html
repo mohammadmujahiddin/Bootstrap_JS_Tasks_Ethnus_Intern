@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_task-5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            max-width: 300px;
+            width: 100%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .form-group textarea {
+            height: 100px;
+        }
+
+        .form-group .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        .form-group button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #3897f0;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            align-self: flex-start;
+        }
+
+        .form-group button:hover {
+            background-color: #3578e5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" placeholder="Your name...">
+                <span id="nameError" class="error"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" placeholder="Your email...">
+                <span id="emailError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="website">Website: </label>
+                <input type="url" id="website" name="website" placeholder="Your website...">
+                <span id="websiteError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message: </label>
+                <textarea id="message" name="message" placeholder="Your message..."></textarea>
+                <span id="messageError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the default form submission
+
+            // Validation logic for name, email, website, and message
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const website = document.getElementById('website').value;
+            const message = document.getElementById('message').value;
+
+            // Check if the name is not empty and contains only alphabets
+            if (!/^[a-zA-Z]+$/.test(name)) {
+                document.getElementById('nameError').innerText = 'Invalid name';
+                return;
+            } else {
+                document.getElementById('nameError').innerText = '';
+            }
+
+            // Check if the email is not empty and is a valid email address
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').innerText = 'Invalid email';
+                return;
+            } else {
+                document.getElementById('emailError').innerText = '';
+            }
+
+            // Check if the website is not empty and is a valid URL
+            const urlPattern = /^(https?:\/\/)?([a-zA-Z\d.-]+)\.([a-zA-Z]{2,6})([/\w.-]*)*\/?$/;
+            if (website && !urlPattern.test(website)) {
+                document.getElementById('websiteError').innerText = 'Invalid website';
+                return;
+            } else {
+                document.getElementById('websiteError').innerText = '';
+            }
+
+            // Check if the message is not empty
+            if (!message) {
+                document.getElementById('messageError').innerText = 'Message cannot be empty';
+                return;
+            } else {
+                document.getElementById('messageError').innerText = '';
+            }
+
+            // If all fields are valid, you can proceed to submit the form or take any further actions
+            console.log('Form submitted!');
+        });
+    </script>
+</body>
+</html>
